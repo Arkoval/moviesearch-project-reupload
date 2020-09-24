@@ -1,13 +1,322 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Montserrat', sans-serif;
+    background: url(./images/cinema-background.jpg) no-repeat fixed center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+    color: #1B1B1B;
+    height: 5rem;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    background: #FFCC33;
+    box-shadow: 0 0 6px 4px lightgray;
+    z-index: 1;
+    width: 100%;
+}
+
+
+header h1 {
+    display: inline;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 8px;
+    padding: 1rem;
+
+   
+}
+@media only screen and (max-width:425px){
+    header h1{
+        font-size: 2rem;
+    }
+    
+}
+header a:hover{
+    transform: scale(1.2);
+}
+
+
+main {
+    width: 100%;
+    max-width: 980px;
+    height: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #1B1B1B;
+    /* padding: 2rem; */
+    z-index: -1;
+}
+
+.searchInput {
+    width: 80%;
+    padding: 10px 40px;
+    border: none;
+    outline: none;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    color: #1B1B1B;
+    font-size: 1.25rem;
+    font-weight: 300;
+    transition: 0.3s ease-out;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+@media only screen and (max-width:425px){
+    .searchInput{
+        font-size: 1rem;
+        padding: .5rem
+    }
+    
+}
+
+.searchInput:focus {
+    box-shadow: 0 0 6px 2px #FFCC33;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 1rem;
+}
+
+.movieCard {
+    width: 30%;
+    min-width: 200px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+
+}
+
+.movieCard .poster {
+    display: block;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.movieCard a {
+    color: #1B1B1B;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding-top: 25px;
+    background: #f1f1f1;
+    flex: 1 1 50px;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.movieCard a:hover {
+    color: #1B1B1B;
+    background: #FFCC33;
+}
+
+.popup {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    background: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 4px lightgray;
+    padding: 2rem;
+}
+@media only screen and (max-width: 1024px){
+    .plot{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.popupContent {
+    display: block;
+    width: 100%;
+    margin: 50px auto;
+    color: #1B1B1B;
+    
+}
+
+.popupContent h1 {
+    font-size: 2rem;
+    font-weight: 600;
+
+}
+
+.popupContent span {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.rating {
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.rating span {
+    color: #FFCC33;
+}
+
+.plot {
+    display: flex;
+    margin: 0 -15px 30px;
+}
+
+.plot img {
+    max-width: 300px;
+    padding: 0px 15px;
+}
+
+.plot p {
+    display: inline-block;
+    padding: 30px 20px;
+    font-weight: 500;
+    border: 1.5px solid #1B1B1B;
+    border-radius: 8px;
+    background-color: rgba(27, 27, 27, .6);
+    color: #f1f1f1;
+}
+
+@media only screen and (max-width: 768px){
+    .plot p{
+        font-size: .8rem;
+    }
+}
+
+.close {
+    border: none;
+    border-radius: 8px;
+    color: #f1f1f1;
+    background: #1B1B1B;
+    padding: 10px 25px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.yt {
+    border: none;
+    border-radius: 8px;
+    color: #f1f1f1;
+    background: #cc3333;
+    padding: 10px 25px;
+    cursor: pointer;
+    margin-right: 30px;
+    text-decoration: none;
+}
+@media only screen and (max-width:470px){
+    .yt , .close{
+        padding: .5rem;
+        margin-right: 1rem;
+    }
+    
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 12.5px 30px;
+    cursor: pointer;
+    margin: 10px 10px;
+    transition: 0.3s ease-out;
+}
+@media only screen and (max-width:425px){
+    .btn{
+        padding: .6rem 1rem;
+        margin: .2rem;
+    }
+    
+}
+.random{
+    color: #1B1B1B;
+    background: #FFCC33;
+}
+.searchBtn{
+    color: #1B1B1B;
+    background: #f1f1f1;
+    margin-top: 20px;
+}
+@media only screen and (max-width:425px){
+    .searchBtn{
+        margin-top: 15px;
+    }
+    
+}
+
+.btn:hover {
+    transform: scale(1.125);
+}
+.randomSearch{
+    text-align: center;
+    margin: 15px 37px;
+    border: 2px solid #FFCC33;
+    border-radius: 8px;
+    padding: 20px;
+}
+.randomSearch h1{
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #f1f1f1;
+    margin-bottom: 10px;
+}
+.randomSelect{
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    margin-left: 25px;
+}
+@media only screen and (max-width:425px){
+    .randomSelect{
+        margin-left: 0;
+    }
+    
+}
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination{
+    width: 100vw;
+    text-align: center;
+    height: 50px;
+    background: #FFCC33;
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pagination li{
+    display: inline;
+
+
+}
+.pagination a{
+    color: #1B1B1B;
+    text-decoration: none;
+    margin: 7px;
+    font-size: 1.25rem;
+
+}
+
+.pagination li .active{
+    color: #1B1B1B;
+    text-decoration: underline;
+    font-weight: 700;
 }
