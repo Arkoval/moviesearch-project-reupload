@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/moviesearch-project-reupload/static/css/main.92afc15f.chunk.css",
+    "main.js": "/moviesearch-project-reupload/static/js/main.1ce1c21d.chunk.js",
+    "main.js.map": "/moviesearch-project-reupload/static/js/main.1ce1c21d.chunk.js.map",
+    "runtime-main.js": "/moviesearch-project-reupload/static/js/runtime-main.63acd380.js",
+    "runtime-main.js.map": "/moviesearch-project-reupload/static/js/runtime-main.63acd380.js.map",
+    "static/css/2.117ce29f.chunk.css": "/moviesearch-project-reupload/static/css/2.117ce29f.chunk.css",
+    "static/js/2.83a03183.chunk.js": "/moviesearch-project-reupload/static/js/2.83a03183.chunk.js",
+    "static/js/2.83a03183.chunk.js.map": "/moviesearch-project-reupload/static/js/2.83a03183.chunk.js.map",
+    "index.html": "/moviesearch-project-reupload/index.html",
+    "precache-manifest.11fa88788f07bb1cb93ae2286c21f14f.js": "/moviesearch-project-reupload/precache-manifest.11fa88788f07bb1cb93ae2286c21f14f.js",
+    "service-worker.js": "/moviesearch-project-reupload/service-worker.js",
+    "static/css/2.117ce29f.chunk.css.map": "/moviesearch-project-reupload/static/css/2.117ce29f.chunk.css.map",
+    "static/css/main.92afc15f.chunk.css.map": "/moviesearch-project-reupload/static/css/main.92afc15f.chunk.css.map",
+    "static/js/2.83a03183.chunk.js.LICENSE.txt": "/moviesearch-project-reupload/static/js/2.83a03183.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/moviesearch-project-reupload/static/media/cinema-background.3ad635b0.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.63acd380.js",
+    "static/css/2.117ce29f.chunk.css",
+    "static/js/2.83a03183.chunk.js",
+    "static/css/main.92afc15f.chunk.css",
+    "static/js/main.1ce1c21d.chunk.js"
+  ]
+}
